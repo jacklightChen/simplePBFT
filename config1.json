@@ -1,0 +1,16 @@
+{
+  "committees":[
+    {
+      "id":"cmt1",
+      "nodes":[
+        {"url":"localhost:1110","node_id":"cmt1_0"},
+        {"url":"localhost:1111","node_id":"cmt1_1"},
+        {"url":"localhost:1112","node_id":"cmt1_2"},
+        {"url":"localhost:1113","node_id":"cmt1_3"}
+      ]
+    }
+  ],
+  "node_id":"cmt1_1",
+  "local_url":"localhost:1111",
+  "local_committee":"cmt1"
+}
