@@ -9,8 +9,16 @@ import (
 )
 
 func (node Node) mockRequest() {
-	time.Sleep(5e9)
-	node.Consenter.RecvMsg(createTxMsg(1), &pb.PeerID{Name: fmt.Sprintf("vp%d", 0)})
+	//for i:=0;i<10;i++{
+		time.Sleep(5e9)
+		node.Consenter.RecvMsg(createTxMsg(0), &pb.PeerID{Name: fmt.Sprintf("vp%d", 0)})
+		node.Consenter.RecvMsg(createTxMsg(1), &pb.PeerID{Name: fmt.Sprintf("vp%d", 0)})
+		node.Consenter.RecvMsg(createTxMsg(2), &pb.PeerID{Name: fmt.Sprintf("vp%d", 0)})
+	//}
+
+
+	//node.Consenter.RecvMsg(createTxMsg(2), &pb.PeerID{Name: fmt.Sprintf("vp%d", 0)})
+	//node.Consenter.RecvMsg(createTxMsg(3), &pb.PeerID{Name: fmt.Sprintf("vp%d", 0)})
 }
 
 func createTxMsg(tag int64) (msg *pb.Message) {
